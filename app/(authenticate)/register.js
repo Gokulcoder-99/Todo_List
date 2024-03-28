@@ -27,7 +27,7 @@ const Register = () => {
     };
 
     axios
-      .post("http://192.168.150.81:3000/api/auth/signup", user)
+      .post("http://localhost:3000/api/auth/signup", user)
       .then((response) => {
         console.log(response);
         Alert.alert(

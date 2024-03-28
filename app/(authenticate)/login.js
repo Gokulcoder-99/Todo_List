@@ -39,7 +39,7 @@ const Login = () => {
       password: password,
     };
 
-    axios.post("http://192.168.150.81:3000/api/auth/login", user).then((response) => {
+    axios.post("http://localhost:3000/api/auth/login", user).then((response) => {
       const token = response.data.token;
       AsyncStorage.setItem("authToken", token);
       Alert.alert(
