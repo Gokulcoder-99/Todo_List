@@ -51,7 +51,7 @@ const Index = () => {
     try {
       const headers = await getHeaders();
       const response = await axios.post(
-        "http://192.168.150.81:3000/api/user/create",
+        "http://localhost:3000/api/user/create",
         { task: newData },
         { headers }
       );
@@ -68,7 +68,7 @@ const Index = () => {
     try {
       const headers = await getHeaders();
       const response = await axios.get(
-        "http://192.168.150.81:3000/api/user/all",
+        "http://localhost:3000/api/user/all",
         { headers }
       );
       if (response) {
@@ -83,7 +83,7 @@ const Index = () => {
     try {
       const headers = await getHeaders();
       const response = await axios.post(
-        "http://192.168.150.81:3000/api/user/remove",
+        "http://localhost:3000/api/user/remove",
         { id: index },
         { headers }
       );
@@ -99,7 +99,7 @@ const Index = () => {
     try {
       const headers = await getHeaders();
       const response = await axios.post(
-        "http://192.168.150.81:3000/api/user/update",
+        "http://localhost:3000/api/user/update",
         { id: index, task },
         { headers }
       );
@@ -132,7 +132,7 @@ const Index = () => {
       const editedTask = taskArr.find((item) => item._id == index);
       let completed = !editedTask.completed;
       const response = await axios.post(
-        "http://192.168.150.81:3000/api/user/update",
+        "http://localhost:3000/api/user/update",
         { id: index, completed },
         { headers }
       );
